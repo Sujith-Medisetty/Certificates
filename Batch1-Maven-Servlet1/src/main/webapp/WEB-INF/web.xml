@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Batch1-Maven-Servlet1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+  <param-name>Global-name</param-name>
+  <param-value>Accessible from all the servlets in this project</param-value>
+  </context-param>
+  <servlet>
+    <description></description>
+    <display-name>Servlet1</display-name>
+    <servlet-name>Servlet1</servlet-name>
+    <servlet-class>com.app.Servlet1</servlet-class>
+    <init-param>
+    	<param-name>query-1</param-name>
+    	<param-value>select * from table1</param-value>
+    </init-param>
+    <init-param>
+    <param-name>servlet-name</param-name>
+    <param-value>servlet-1</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/Servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Servlet2</display-name>
+    <servlet-name>Servlet2</servlet-name>
+    <servlet-class>com.app.Servlet2</servlet-class>
+    <init-param>
+    <param-name>query-2</param-name>
+    <param-value>select * from table2</param-value>
+    </init-param>
+    <init-param>
+    <param-name>servlet-name</param-name>
+    <param-value>Servlet-2</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet2</servlet-name>
+    <url-pattern>/Servlet2</url-pattern>
+  </servlet-mapping>
+</web-app>
